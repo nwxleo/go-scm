@@ -7,7 +7,7 @@ package enrich
 import (
 	"context"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 // Webhook enriches the webhook payload with missing

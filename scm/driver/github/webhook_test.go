@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 
 	"github.com/google/go-cmp/cmp"
 )
@@ -185,9 +185,9 @@ func TestWebhooks(t *testing.T) {
 			after:  "testdata/webhooks/deployment_commit.json.golden",
 			obj:    new(scm.DeployHook),
 		},
-                //
-                // release
-                //
+		//
+		// release
+		//
 		{
 			event:  "release",
 			before: "testdata/webhooks/release_published.json",
@@ -195,40 +195,40 @@ func TestWebhooks(t *testing.T) {
 			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_unpublished.json",
-		      after:  "testdata/webhooks/release_unpublished.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_unpublished.json",
+			after:  "testdata/webhooks/release_unpublished.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_created.json",
-		      after:  "testdata/webhooks/release_created.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_created.json",
+			after:  "testdata/webhooks/release_created.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_edited.json",
-		      after:  "testdata/webhooks/release_edited.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_edited.json",
+			after:  "testdata/webhooks/release_edited.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_deleted.json",
-		      after:  "testdata/webhooks/release_deleted.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_deleted.json",
+			after:  "testdata/webhooks/release_deleted.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_prereleased.json",
-		      after:  "testdata/webhooks/release_prereleased.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_prereleased.json",
+			after:  "testdata/webhooks/release_prereleased.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 		{
-		      event:  "release",
-		      before: "testdata/webhooks/release_released.json",
-		      after:  "testdata/webhooks/release_released.json.golden",
-		      obj:    new(scm.ReleaseHook),
+			event:  "release",
+			before: "testdata/webhooks/release_released.json",
+			after:  "testdata/webhooks/release_released.json.golden",
+			obj:    new(scm.ReleaseHook),
 		},
 	}
 

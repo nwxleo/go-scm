@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/drone/go-scm/scm"
-	"github.com/drone/go-scm/scm/driver/stash"
-	"github.com/drone/go-scm/scm/transport"
+	"github.com/nwxleo/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm/driver/stash"
+	"github.com/nwxleo/go-scm/scm/transport"
 )
 
 func TestCreateUpdateDeleteFileStash(t *testing.T) {

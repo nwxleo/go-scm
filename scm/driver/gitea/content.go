@@ -9,7 +9,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 type contentService struct {

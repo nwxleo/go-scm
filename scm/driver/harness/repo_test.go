@@ -12,11 +12,11 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/drone/go-scm/scm"
-	"github.com/drone/go-scm/scm/transport"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/h2non/gock"
+	"github.com/nwxleo/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm/transport"
 )
 
 func TestRepositoryFind(t *testing.T) {

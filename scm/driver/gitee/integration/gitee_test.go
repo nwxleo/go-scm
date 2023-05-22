@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/drone/go-scm/scm/driver/gitee"
-	"github.com/drone/go-scm/scm/transport"
+	"github.com/nwxleo/go-scm/scm/driver/gitee"
+	"github.com/nwxleo/go-scm/scm/transport"
 )
 
 func TestGitee(t *testing.T) {

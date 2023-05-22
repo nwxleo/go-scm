@@ -14,7 +14,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 // New returns a new Bitbucket API client.

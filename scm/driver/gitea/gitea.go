@@ -15,7 +15,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 // New returns a new Gitea API client.
@@ -35,7 +35,7 @@ func New(uri string) (*scm.Client, error) {
 	client.Contents = &contentService{client}
 	client.Git = &gitService{client}
 	client.Issues = &issueService{client}
-	client.Milestones = & milestoneService{client}
+	client.Milestones = &milestoneService{client}
 	client.Organizations = &organizationService{client}
 	client.PullRequests = &pullService{client}
 	client.Repositories = &repositoryService{client}

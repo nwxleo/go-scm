@@ -7,7 +7,7 @@ package bitbucket
 import (
 	"testing"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 func TestClient(t *testing.T) {

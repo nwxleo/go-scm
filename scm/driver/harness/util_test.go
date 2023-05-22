@@ -7,7 +7,7 @@ package harness
 import (
 	"testing"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 func Test_encodeListOptions(t *testing.T) {

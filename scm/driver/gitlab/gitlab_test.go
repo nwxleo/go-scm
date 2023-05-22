@@ -7,7 +7,7 @@ package gitlab
 import (
 	"testing"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 var mockHeaders = map[string]string{

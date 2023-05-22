@@ -4,11 +4,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/drone/go-scm/scm/driver/internal/null"
+	"github.com/nwxleo/go-scm/scm/driver/internal/null"
 	"net/url"
 	"time"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 type milestoneService struct {

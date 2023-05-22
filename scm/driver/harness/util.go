@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 func buildHarnessURI(account, organization, project, repo string) (uri string) {

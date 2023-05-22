@@ -3,7 +3,7 @@ package bitbucket
 import (
 	"context"
 
-	"github.com/drone/go-scm/scm"
+	"github.com/nwxleo/go-scm/scm"
 )
 
 type milestoneService struct {
