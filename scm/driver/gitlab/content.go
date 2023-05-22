@@ -19,7 +19,7 @@ type contentService struct {
 }
 
 func (s *contentService) Find(ctx context.Context, repo, path, ref string) (*scm.Content, *scm.Response, error) {
-	endpoint := fmt.Sprintf("api/v4/projects/%s/repository/files/%s?ref=%s", encode(repo), encodePath(path), ref)
+	endpoint := fmt.Sprintf("api/v3/projects/%s/repository/files/%s?ref=%s", encode(repo), encodePath(path), ref)
 	out := new(content)
 	res, err := s.client.do(ctx, "GET", endpoint, nil, out)
 	raw, berr := base64.StdEncoding.DecodeString(out.Content)
@@ -40,7 +40,7 @@ func (s *contentService) Find(ctx context.Context, repo, path, ref string) (*scm
 }
 
 func (s *contentService) Create(ctx context.Context, repo, path string, params *scm.ContentParams) (*scm.Response, error) {
-	endpoint := fmt.Sprintf("api/v4/projects/%s/repository/files/%s", encode(repo), encodePath(path))
+	endpoint := fmt.Sprintf("api/v3/projects/%s/repository/files/%s", encode(repo), encodePath(path))
 	in := &createUpdateContent{
 		Branch:        params.Branch,
 		Content:       params.Data,
@@ -55,7 +55,7 @@ func (s *contentService) Create(ctx context.Context, repo, path string, params *
 }
 
 func (s *contentService) Update(ctx context.Context, repo, path string, params *scm.ContentParams) (*scm.Response, error) {
-	endpoint := fmt.Sprintf("api/v4/projects/%s/repository/files/%s", encode(repo), encodePath(path))
+	endpoint := fmt.Sprintf("api/v3/projects/%s/repository/files/%s", encode(repo), encodePath(path))
 	in := &createUpdateContent{
 		Branch:        params.Branch,
 		Content:       params.Data,
@@ -70,7 +70,7 @@ func (s *contentService) Update(ctx context.Context, repo, path string, params *
 }
 
 func (s *contentService) Delete(ctx context.Context, repo, path string, params *scm.ContentParams) (*scm.Response, error) {
-	endpoint := fmt.Sprintf("api/v4/projects/%s/repository/files/%s", encode(repo), encodePath(path))
+	endpoint := fmt.Sprintf("api/v3/projects/%s/repository/files/%s", encode(repo), encodePath(path))
 	in := &createUpdateContent{
 		Branch:        params.Branch,
 		CommitMessage: params.Message,
@@ -84,7 +84,7 @@ func (s *contentService) Delete(ctx context.Context, repo, path string, params *
 }
 
 func (s *contentService) List(ctx context.Context, repo, path, ref string, opts scm.ListOptions) ([]*scm.ContentInfo, *scm.Response, error) {
-	endpoint := fmt.Sprintf("api/v4/projects/%s/repository/tree?path=%s&ref=%s&%s", encode(repo), url.QueryEscape(path), ref, encodeListOptions(opts))
+	endpoint := fmt.Sprintf("api/v3/projects/%s/repository/tree?path=%s&ref=%s&%s", encode(repo), url.QueryEscape(path), ref, encodeListOptions(opts))
 	out := []*object{}
 	res, err := s.client.do(ctx, "GET", endpoint, nil, &out)
 	return convertContentInfoList(out), res, err
